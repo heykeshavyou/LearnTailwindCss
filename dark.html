@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DARK</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white dark:bg-black">
+    <h1 class="text-white">Code by Keshav</h1>
+    <button
+      class="text-white bg-black hover:bg-white hover:text-black p-4 m-5"
+      onclick="change()"
+    >
+      Change
+    </button>
+    <script>
+      let isdark = true;
+      function change() {
+        let html = document.querySelector("html");
+        if (isdark) {
+          html.setAttribute("data-theme", "dark");
+          isdark = false;
+        } else {
+          html.setAttribute("data-theme", "");
+          isdark = true;
+        }
+      }
+    </script>
+  </body>
+</html>
